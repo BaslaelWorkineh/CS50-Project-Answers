@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+
+        <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+</head>
+<body>
+        <div class="disabler"></div>
+        <div class="upper-btns">
+            <button onclick="loginclicked()" class="login-btn">Login</button>
+        </div>
+       <div class="wrapper-login-register">
+            <div class="login-wrapper">
+                <button onclick="loginclose()" class="login-cls">X</button>
+                <h1>Login</h1>
+                <h4>Username</h4>
+                <input class="login-input" type="text" required placeholder="Username">
+                <i id="usericon" class="fa-solid fa-user"></i>
+                <h4>Password</h4>
+                <input class="login-input" type="password" required placeholder="Password">
+                <i id="lockicon3" class="fa-solid fa-lock"></i>
+                <button class="login-submit" type="submit">Login</button>
+                <p>Don't have an account? <a href="#"
+                    class="register-link" onclick="lwclicked()">Register
+                </a></p>
+            </div>
+
+            <div class="register-wrapper">
+                <button onclick="loginclose()" class="Register-cls">X</button>
+                <h1>Register</h1>
+                <h4>Username</h4>
+                <input class="register-input" type="text" required placeholder="Username">
+                <i id="emailicon1" class="fa-solid fa-user"></i>
+                <h4>Email</h4>
+                <input class="register-input" type="text" required placeholder="Email">
+                <i id="emailicon" class="fa-solid fa-envelope"></i>
+                <h4>Password</h4>
+                <input class="register-input" type="password" required placeholder="Password">
+                <i id="lockicon1" class="fa-solid fa-lock"></i>
+                <h4>Confirm Password</h4>
+                <input class="register-input" type="password" required placeholder="Confirm Password">
+                <i id="lockicon" class="fa-solid fa-lock"></i>
+                <button class="register-submit" type="submit">Register</button>
+                <p>Already have an account? <a href="#"
+                    class="register-link" onclick="rwclicked()">Login
+                </a></p>
+            </div>
+       </div>
+
+
+       <div class="wrapper">
+        <button class="wrapperbtn" onclick="menuclicked()">MENU</button>
+
+    </div>
+
+    <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">Projects</a>
+        <a href="contact.html">Contact Me</a>
+        <a href="phylosophy.html">Philosophy</a>
+    </div>
+
+    <div onclick="lockclicked()" id="close-lock" class="lock-scr"><i class="fa-solid fa-lock"></i>
+    </div>
+
+    <div onclick="lockclicked()" id="open-lock" class="open-scr">
+        <i class="fa-solid fa-lock-open"></i>
+    </div>
+    <div  id="left-side" class="side">
+        <h2 class="title">
+            Do you want to know <span class="fancy">Me?</span>
+        </h2>
+
+
+        <div class="slider2">
+            <div class="slide-track2">
+                <div class="course-card1"></div>
+                <div class="course-card2"></div>
+                <div class="course-card3"></div>
+                <div class="course-card4"></div>
+                <div class="course-card5"></div>
+                <div class="course-card6"></div>
+                <div class="course-card7"></div>
+
+                <div class="course-card1"></div>
+                <div class="course-card2"></div>
+                <div class="course-card3"></div>
+                <div class="course-card4"></div>
+                <div class="course-card5"></div>
+                <div class="course-card6"></div>
+                <div class="course-card7"></div>
+            </div>
+        </div>
+    </div>
+    <div id="right-side" class="side">
+        <div class="logo">Basketo</div>
+        <h2 class="title">
+            Well You are in the right <span class="fancy">Place :)</span>
+        </h2>
+
+        <div class="slider1">
+            <div class="slide-track1">
+                <div class="course-card1">
+
+                </div>
+                <div class="course-card2">
+
+                </div>
+                <div class="course-card3">
+
+                </div>
+                <div class="course-card4">
+
+                </div>
+                <div class="course-card5">
+
+                </div>
+                <div class="course-card6">
+
+                </div>
+                <div class="course-card7">
+
+                </div>
+
+                <div class="course-card1">
+
+                </div>
+                 </div>
+                <div class="course-card2">
+
+                </div>
+                <div class="course-card3">
+
+                </div>
+                <div class="course-card4">
+
+                </div>
+                <div class="course-card5">
+
+                </div>
+                <div class="course-card6">
+
+                </div>
+                <div class="course-card7">
+
+                </div>
+            </div>
+        </div>
+
+
+    <script>
+        const left = document.getElementById("left-side");
+const menu = document.querySelector('.menu');
+const lock = document.querySelector('.lock-scr');
+const openLk = document.querySelector('.open-scr')
+
+const wrapperLR = document.querySelector('.wrapper-login-register');
+const screenDisabler = document.querySelector('.disabler')
+const registerwrapper = document.querySelector('.register-wrapper');
+const loginwrapper = document.querySelector('.login-wrapper');
+
+const menubtn1 = document.querySelector('.btn1');
+const menubtn2 = document.querySelector('.btn2');
+const menubtn3 = document.querySelector('.btn3');
+const menubtn4 = document.querySelector('.btn4');
+const menubtn5 = document.querySelector('.btn5');
+
+function menuclicked(){
+    if(menu.classList.contains('active'))
+    {
+        menu.classList.remove('active');
+        menubtn1.classList.remove('active');
+        menubtn2.classList.remove('active');
+        menubtn3.classList.remove('active');
+        menubtn4.classList.remove('active');
+        menubtn5.classList.remove('active');
+    }
+
+    else
+    {
+        menu.classList.add('active');
+        menubtn1.classList.add('active');
+        menubtn2.classList.add('active');
+        menubtn3.classList.add('active');
+        menubtn4.classList.add('active');
+        menubtn5.classList.add('active');
+    }
+
+}
+
+function loginclicked()
+{
+    wrapperLR.classList.add('active');
+    screenDisabler.classList.add('active');
+}
+
+function loginclose(){
+    wrapperLR.classList.remove('active');
+    screenDisabler.classList.remove('active');
+}
+
+function rwclicked(){
+    registerwrapper.classList.remove('active');
+    loginwrapper.classList.remove('active');
+}
+
+function lwclicked(){
+    registerwrapper.classList.add('active');
+    loginwrapper.classList.add('active');
+}
+
+var locked = false;
+
+const handleOnMove = e => {
+    const p = e.clientX / window.innerWidth * 100;
+
+    left.style.width = `${p}%`;
+}
+
+function lockclicked(){
+    if(lock.classList.contains('active'))
+    {
+        lock.classList.remove('active');
+        openLk.classList.remove('not-active');
+        locked = false;
+    }
+    else
+    {
+        lock.classList.add('active');
+        openLk.classList.add('not-active');
+        locked = true;
+    }
+
+    if(!locked)
+    {
+        document.onmousemove = e => handleOnMove(e);
+
+        document.ontouchmove = e => handleOnMove(e.touches[0]);
+    }
+    else{
+        document.onmousemove = 12;
+        left.style.width = "110px";
+    }
+}
+
+if(!locked)
+{
+    document.onmousemove = e => handleOnMove(e);
+
+    document.ontouchmove = e => handleOnMove(e.touches[0]);
+}
+else{
+    document.onmousemove = 12;
+    left.style.width = "110px";
+}
+
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+document.querySelector(".start-learing-btn").onmouseover = event =>{
+    let iterations = 0;
+
+    const interval =  setInterval(() => {
+        event.target.innerText = event.target.innerText.split("")
+    .map((letter, index) => {
+        if(index < iterations){
+            return event.target.dataset.value[index];
+        }
+
+        return letters[Math.floor(Math.random() * 26)]
+    })
+        .join("");
+
+    if(iterations >= event.target.dataset.value.length) {
+        clearInterval(interval);
+    }
+    iterations += 1/2;
+    }, 30);
+
+}
+
+    </script>
+
+</body>
+</html>

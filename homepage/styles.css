@@ -1,0 +1,822 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.side{
+    height: 100vh;
+    width: 100%;
+
+    display: grid;
+    place-items: center;
+
+    overflow: hidden;
+    position: absolute;
+    transition: .1s;
+}
+.side .title{
+    color: white;
+    font-family: "Rubik", sans-serif;
+    font-size: 6vw;
+    margin: 0px 15vw;
+    width: 70vw;
+}
+
+#left-side{
+    background: linear-gradient(rgb(163, 76, 255), rgb(123, 0, 255)) ;
+    z-index: 2;
+}
+#right-side{
+    background: linear-gradient(rgb(255, 136, 0), rgb(255, 162, 0));
+}
+
+.side .fancy{
+    font-family:  "Sofia", sans-serif;
+    font-size: 1em;
+    line-height: 0.8em;
+}
+
+#left-side .title{
+
+    margin-top: -5vw;
+    color: white;
+}
+#left-side .fancy{
+    color: rgb(255, 196, 0);
+}
+
+#right-side .title{
+    margin-top: -5vw;
+    color: rgb(0, 0, 0);
+}
+
+#right-side .fancy{
+    color: white;
+}
+
+#right-side .logo{
+    color: rgb(0, 0, 0);
+    font-size: 4vw;
+    font-family:  "Sofia", sans-serif;
+    letter-spacing: -.1vw;
+    margin-left: -67%;
+    margin-top: -38.8%;
+    position: absolute;
+
+}
+
+.logo:hover{
+    cursor: pointer;
+}
+
+.wrapper .wrapperbtn {
+    background: linear-gradient(yellow, rgb(238, 53, 53));
+    color: rgb(86, 0, 120);
+
+    height: 70px;
+    border-radius: 50px;
+    border: none;
+    font-size: larger;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:bolder;
+    z-index: 4;
+    box-shadow: 0 0 3vw 1vw #000;
+    transition: .1s;
+    top: 50%;
+    left: -10%;
+    position: absolute;
+    font-size: 1vw;
+    margin: 0px 15vw;
+    width: 4vw;
+    height: 4vw;
+}
+
+.wrapper .wrapperbtn:hover{
+    transform: scale(1.2);
+    box-shadow: 0px 1px 40px 6px#000;
+    cursor: pointer;
+}
+
+.wrapper .wrapperbtn:active{
+    transform: scale(1);
+}
+.menu{
+    background:linear-gradient(hsla(191, 100%, 50%, 0.1), hsla(49, 100%, 50%, 0.1)) ;
+    backdrop-filter: blur(1rem);
+    color: White;
+    height: 25vw;
+    width: 10vw;
+    position: absolute;
+    z-index: 3;
+    margin-top: .2vw;
+    margin-left: 2%;
+    border-bottom-right-radius: 2vw;
+    border-bottom-left-radius: 2vw;
+    border: .4vw solid rgb(0, 0, 0);
+    border-style:double;
+    box-shadow: 2px 10px 10px .1vw black;
+    transition: .1s;
+    scale: 0;
+}
+.menu.active{
+
+    scale:1;
+}
+
+.menu a{
+    color: white;
+    text-decoration-line: none;
+    font-size: 1.5vw;
+    font-weight: 700;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   display: grid;
+}
+.upper-btns
+{
+    display: flex;
+    position: absolute;
+    z-index: 5;
+    left: 58vw;
+    top: 2%;
+    width: 40vw;
+    align-items: center;
+    justify-content: center;
+    background:linear-gradient(hsla(191, 100%, 50%, 0.1), hsla(49, 100%, 50%, 0.1)) ;
+    backdrop-filter: blur(1rem);
+    border-radius: 5px;
+    gap:2vw;
+}
+
+.upper-btns .start-learing-btn{
+    width: 10vw;
+    height: 5vw;
+    font-size: 2vw;
+    font-weight: bold;
+    transform: scale(1.1);
+    color: rgb(0, 0, 0);
+    background: rgb(215, 212, 212);
+    border: none;
+    color: black;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-shadow: .2vw 0vw 2vw 0vw rgb(28, 27, 27);
+    border-radius: .2vw;
+    transition: .2s;
+    overflow: hidden;
+}
+
+.upper-btns .start-learing-btn:hover{
+    cursor: pointer;
+}
+
+.upper-btns .start-learing-btn:active{
+    transform: scale(.9);
+}
+.upper-btns .login-btn{
+    width:5vw;
+    height: 2.5vw;
+    font-size: 1.5vw;
+    font-weight: 700;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    transition: .2s;
+    background-color: rgb(215, 212, 212);
+    color: black;
+    box-shadow: .1vw 0vw .5vw 0vw rgb(37, 36, 36);
+    border-radius: .2vw;
+    transform: scale(1.1);
+    border: none;
+}
+.upper-btns .login-btn:hover{
+    background-color: rgb(215, 212, 212);
+    color: black;
+    box-shadow: 2px 2px 10px 2px black;
+    border-radius: 3px;
+    transform: scale(1.1);
+}
+.upper-btns .login-btn:active{
+    transform: scale(0.98);
+}
+
+.disabler{
+ width: 100%;
+ background: transparent;
+ height: 100vh;
+ position: absolute;
+ z-index: 6;
+ transform: scale(0);
+}
+.disabler.active{
+    transform: scale(1);
+}
+
+.wrapper-login-register{
+    margin-left: 30%;
+    margin-top: 4%;
+    background:linear-gradient(hsla(191, 100%, 50%, 0.1), hsla(49, 100%, 50%, 0.1)) ;
+    backdrop-filter: blur(1rem);
+    width: 35vw;
+    height: 40vw;
+    position: absolute;
+    z-index: 7;
+    overflow: hidden;
+    border: .1vw solid black;
+    border-radius: 2vw;
+    transition: .1s;
+    transform: scale(0);
+}
+.wrapper-login-register.active{
+    transform: scale(1);
+}
+.login-wrapper{
+    position: absolute;
+    transform: translateX(0);
+    transition: .1s;
+}
+.login-wrapper.active{
+    transform: translateX(40vw);
+}
+.login-wrapper h1{
+    color: white;
+    font-size: 3vw;
+    margin-top: 1vw;
+    margin-left: 12vw;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.login-wrapper h4{
+    color: white;
+    font-size: 3vw;
+    margin-top: 2vw;
+    margin-left: 2.5vw;
+    position: absolute;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.login-submit{
+    width: 15vw;
+    height: 4vw;
+    font-size: 2vw;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #002652;
+    margin-left: 10vw;
+    margin-top: 2vw;
+    border: none;
+    color: white;
+    border-radius: .5vw;
+}
+.login-wrapper p{
+    color: white;
+    font-size: 1.5vw;
+    margin-left: 8vw;
+    margin-top: 1vw;
+}
+.login-wrapper a{
+    color: white;
+    text-decoration: none;
+    color: #000000;
+}
+.login-input{
+    width: 30vw;
+    height: 4vw;
+    border-radius: .3vw;
+    font-size: 2vw;
+    margin-left: 3vw;
+    margin-top: 6vw;
+    border: none;
+}
+
+#usericon{
+    margin-left: -5vw;
+    transform: scale(1.5);
+}
+
+#lockicon{
+    margin-left: -5vw;
+    transform: scale(1.5);
+}
+.login-cls{
+    border: none;
+    position: absolute;
+    margin-left: 31vw;
+    width: 4vw;
+    height: 4vw;
+    background: #002652;
+    font-size: 2vw;
+    color: white;
+    border-bottom-left-radius: 2vw;
+}
+
+
+.register-wrapper{
+    position: absolute;
+    transform: translateX(-40vw);
+    transition: .1s;
+}
+.register-wrapper.active{
+    position: absolute;
+    transform: translateX(0);
+}
+.register-wrapper h1{
+    color: white;
+    font-size: 3vw;
+    margin-top: 1vw;
+    margin-left: 12vw;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.register-wrapper h4{
+    color: white;
+    font-size: 2vw;
+    margin-left: 3vw;
+    position: absolute;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.register-submit{
+    width: 15vw;
+    height: 4vw;
+    font-size: 2vw;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #002652;
+    margin-left: 10vw;
+    margin-top: 2vw;
+    border: none;
+    color: white;
+    border-radius: .5vw;
+}
+.register-wrapper p{
+    color: white;
+    font-size: 1.5vw;
+    margin-left: 8vw;
+    margin-top: 1vw;
+}
+.register-wrapper a{
+    color: white;
+    text-decoration: none;
+    color: #000000;
+}
+.register-input{
+    width: 30vw;
+    height: 3vw;
+    border-radius: .3vw;
+    font-size: 2vw;
+    margin-left: 3vw;
+    margin-top: 3vw;
+    border: none;
+}
+
+#usericon{
+    margin-left: -2vw;
+    transform: scale(1.5);
+}
+
+#lockicon{
+    margin-left: -2vw;
+    transform: scale(1.5);
+}
+#emailicon{
+    margin-left: -2vw;
+    transform: scale(1.5);
+}
+.Register-cls{
+    border: none;
+    position: absolute;
+    margin-left: 31vw;
+    width: 4vw;
+    height: 4vw;
+    background: #002652;
+    font-size: 2vw;
+    color: white;
+    border-bottom-left-radius: 2vw;
+}
+
+.lock-scr{
+    position: absolute;
+    z-index: 5;
+    margin-top: 28vw;
+    margin-left: 5.7vw;
+    transform: scale(0);
+}
+
+.lock-scr i{
+    font-size: 3vw;
+    color: #05205a;
+}
+
+.open-scr{
+    position: absolute;
+    z-index: 5;
+    margin-top: 28vw;
+    margin-left: 5.7vw;
+    transform: scale(1);
+}
+.open-scr:active{
+    transform: scale(1.1);
+}
+
+.open-scr i{
+    font-size: 3vw;
+    color: #05205a;
+}
+
+.lock-scr.active{
+    transform: scale(1);
+}
+.open-scr.not-active{
+    transform: scale(0);
+}
+
+.lock-scr.active:active{
+    transform: scale(1.1);
+}
+.lock-scr.active i:hover{
+    color: #545454;
+}
+.open-scr i:hover{
+    color: #4c4c4c;
+}
+
+.slider1{
+    height: 250px;
+    margin: auto;
+    position: absolute;
+    width: 100%;
+    display: grid;
+    padding-left:bottom;
+    overflow: hidden;
+    bottom: 0vw;
+
+}
+.slide-track1{
+    display: flex;
+    gap: 14px;
+    animation: scroll 40s linear infinite;
+}
+.slide-track1 .course-card1{
+    width: 20vw;
+    height: 16vw;
+    background-color: gray;
+    background-image: url("assets/algebra.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    bottom: 0vw;
+    border-radius:2vw ;
+    transition: .2s;
+}
+.slide-track1 .course-card2{
+    width: 20vw;
+    height: 16vw;
+    background-color: gray;
+    background-image: url("assets/biology.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    bottom: 0vw;
+    border-radius:2vw ;
+    transition: .2s;
+}
+.slide-track1 .course-card3{
+    width: 20vw;
+    height: 16vw;
+    background-color: gray;
+    background-image: url("assets/business.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    bottom: 0vw;
+    border-radius:2vw ;
+    transition: .2s;
+}
+.slide-track1 .course-card4{
+    width: 20vw;
+    height: 16vw;
+    background-color: gray;
+    background-image: url("assets/calculus.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    bottom: 0vw;
+    border-radius:2vw ;
+    transition: .2s;
+}
+.slide-track1 .course-card5{
+    width: 20vw;
+    height: 16vw;
+    background-color: gray;
+    background-image: url("assets/chemistry.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    bottom: 0vw;
+    border-radius:2vw ;
+    transition: .2s;
+}
+.slide-track1 .course-card6{
+    width: 20vw;
+    height: 16vw;
+    background-color: gray;
+    background-image: url("assets/coding.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    bottom: 0vw;
+    border-radius:2vw ;
+    transition: .2s;
+}
+.slide-track1 .course-card7{
+    width: 20vw;
+    height: 16vw;
+    background-color: gray;
+    background-image: url("assets/medicin.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    bottom: 0vw;
+    border-radius:2vw ;
+    transition: .2s;
+}
+
+@keyframes scroll {
+    0%
+    {
+        transform: translateX(0);
+    }
+    100%
+    {
+        transform: translateX(calc(-250px * 9));
+    }
+}
+
+
+.slider2{
+    height: 250px;
+    margin: auto;
+    position: absolute;
+    width: 100%;
+    display: grid;
+    padding-left:bottom;
+    overflow: hidden;
+    bottom: 0vw;
+}
+.slide-track2{
+    display: flex;
+    gap: 14px;
+    animation: scroll 40s linear infinite;
+
+}
+.slide-track2 .course-card1{
+    width: 20vw;
+    height: 16vw;
+    background-image: url("assets/physics.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius:2vw ;
+    transition: .2s;
+}
+.course-card1:hover{
+    transform: translateY(2px);
+}
+.course-card2:hover{
+    transform: translateY(2px);
+}
+.course-card3:hover{
+    transform: translateY(2px);
+}
+.course-card4:hover{
+    transform: translateY(2px);
+}
+.course-card5:hover{
+    transform: translateY(2px);
+}
+.course-card6:hover{
+    transform: translateY(2px);
+}
+.course-card7:hover{
+    transform: translateY(2px);
+}
+
+.slide-track2 .course-card2{
+    width: 20vw;
+    height: 16vw;
+    background-image: url("assets/programming.avif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius:2vw ;
+    transition: .2s;
+}
+.slide-track2 .course-card3{
+    width: 20vw;
+    height: 16vw;
+    background-image: url("assets/photography.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius:2vw ;
+    transition: .2s;
+}
+.slide-track2 .course-card4{
+    width: 20vw;
+    height: 16vw;
+    background-image: url("assets/astronomy.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius:2vw ;
+    transition: .2s;
+}
+.slide-track2 .course-card5{
+    width: 20vw;
+    height: 16vw;
+    background-image: url("assets/Frontend-vs-Backend.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius:2vw ;
+    transition: .2s;
+}
+.slide-track2 .course-card6{
+    width: 20vw;
+    height: 16vw;
+    background-image: url("assets/game design.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius:2vw ;
+    transition: .2s;
+}
+.slide-track2 .course-card7{
+    width: 20vw;
+    height: 16vw;
+    background-image: url("assets/art.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius:2vw ;
+    transition: .2s;
+}
+
+.textmsg{
+    width: 20vw;
+    height: 16vw;
+    background: rgb(0, 0, 0);
+    border-radius:2vw ;
+    gap: 14px;
+    transition: .2s;
+    opacity: 0;
+}
+
+.textmsg:hover{
+    opacity: .9;
+}
+
+.slide-track1 h3{
+    position: absolute;
+    border-radius: 100px;
+    font-size: 30px;
+    width: 20vw;
+    height: 16vw;
+    margin-left: 2vw;
+    color: rgb(255, 255, 255);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    opacity: 1;
+    z-index: 1;
+    text-decoration: underline;
+}
+.slide-track1 p{
+    position: absolute;
+    width: 17vw;
+    height: 16vw;
+    border-radius: 100px;
+    font-size: 15px;
+    margin-left: 2vw;
+    margin-top: 4vw;
+    color: rgb(255, 255, 255);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    opacity: 1;
+    z-index: 1;
+}
+
+.slide-track1 h6{
+    position: absolute;
+    width: 17vw;
+    height: 16vw;
+    border-radius: 100px;
+    font-size: 15px;
+    margin-left: 2vw;
+    margin-top: 14vw;
+    color: rgb(255, 255, 255);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    opacity: 1;
+    z-index: 1;
+}
+
+
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  .column {
+    float: left;
+    width: 30%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+  }
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+  }
+
+  .about-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #474e5d;
+    color: white;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .title {
+    color: grey;
+  }
+
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  .button:hover {
+    background-color: #555;
+  }
+
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  .columnC input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+  }
+
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+  /* Style the container/contact section */
+  .containerC {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px;
+  }
+
+  /* Create two columns that float next to eachother */
+  .columnC {
+    float: left;
+    width: 45%;
+    margin-top: 6px;
+    padding: 20px;
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .columnC, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+
+
+  .headerP {
+    padding: 60px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+    font-size: 30px;
+  }
+
+  #final{
+    text-align: center;
+    margin-left: 300px;
+    margin-right: 300px;
+  }

@@ -1,0 +1,11 @@
+sort1 uses: Bubble sort
+
+How do you know?: For the sorted numbers it took lesser time than the other two sorting mechanisms.
+
+sort2 uses: Merge sort
+
+How do you know?: it took a small amount of time compared to the other sorting mechanisms when used in the random numbers.
+
+sort3 uses: Selection sort
+
+How do you know?: it took same amount of time for both sorted and random numbers and also took longer time than the others.
